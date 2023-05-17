@@ -4,7 +4,7 @@
   🚏🚌 Tutut Server 🚌🚏
 </h1>
 <p align="center">
-    Esta es una 👉🏻<a href="http://www.isaias.work">aplicación web API</a> que sirve para gestionar los datos del sistema de movilidad urbana y monitoreo GPS para transporte público Tutut.</p>
+    Esta es una aplicación web API que sirve para gestionar los datos del sistema de movilidad urbana y monitoreo GPS para transporte público Tutut.</p>
 
 # 🧱 Proyecto
 
