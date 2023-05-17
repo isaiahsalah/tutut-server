@@ -2,9 +2,6 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 
-//socket.io
-import http from 'http';
-import { Server } from "socket.io";
 
 // Import routes
 import userRoutes from "./routes/user.routes.js";
@@ -33,24 +30,6 @@ app.use("/api/gps", gpsRoutes);
 app.use("/api/control", controlRoutes);
 app.use("/api/reseña", reseñaRoutes);
 app.use("/api/ruta", rutaRoutes);
-//socket
-const server = http.createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: "*"
-    }
-});
-server.listen(3001, () => console.log(`socket encendido`))
 
-
-io.on('connection', (socket) => {
-    socket.on('conectado', () => {
-        console.log('esta conectadito');
-    })
-    socket.on('location', (gps) => {
-        io.emit("gps", gps)
-        //console.log(gps);
-    })
-});
 
 export default app;
